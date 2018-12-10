@@ -1,0 +1,24 @@
+<h1>All my Cars</h1>
+
+<table border=1>
+  <tr>
+	<th>Car Name</th>
+	<th>Car Type</th>
+	<th>Year</th>
+	<th>Edit car details</th>
+  </tr>
+
+<% @my_cars.each do |car| %>
+  <tr>
+	<td><%= link_to car.CarName,:controller => :rentals , :action =>:index , :id => car.id %></td>
+	<td><%=car.CarType %></td>
+	<td><%=car.Year %></td>
+	<td> <%= link_to "Edit",edit_my_car_path(car) %> </td>
+	<td> <%= link_to "Delete",car, :data => {:confirm => "Are you sure you want to delete"} ,:method => :delete %> </td>
+  </tr>
+<% end %>
+
+</table>
+
+
+<p> <%= link_to "Add Car details", new_my_car_path %>  </p>

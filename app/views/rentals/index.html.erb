@@ -1,0 +1,28 @@
+<h1>Rental details</h1>
+
+	<%= form_for @myrental, :url => {:action => :create , :id => @myrental.my_car_id } do |f| %>
+
+	<p>	Borrowed Date<%= f.text_field :FromDate %></p>	
+	<p>	Returned Date<%= f.text_field :ToDate %> </p>	
+	<p>	Borrowed By<%= f.text_field :BorrowedBy %> </p>
+	<%= f.submit "Submit" %>
+	<% end %>
+
+<table border=1>
+  <tr>
+	<th>Borrowed Date</th>
+	<th>Returned Date</th>
+	<th>Borrowed By</th>
+  </tr>
+
+<% @myrentals.each do |r| %>
+  <tr>
+	<td><%=r.FromDate %></td>
+	<td><%=r.ToDate %></td>
+	<td><%=r.BorrowedBy %></td>
+  </tr>
+<% end %>
+
+</table>
+
+

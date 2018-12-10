@@ -1,0 +1,10 @@
+<h1>Rental details</h1>
+
+	<%= form_for @rentals do |f| %>
+
+	<p>	<%= f.label :CarName %> </p>
+	<p>	Borrowed Date<%= f.text_field :FromDate %></p>	
+	<p>	Returned Date<%= f.text_field :ToDate %> </p>	
+	<p>	Borrowed By<%= f.text_field :BorrowedBy %> </p>
+	<%= f.submit "Submit" %>
+	<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  FromDate: 2018-09-20
+  ToDate: 2018-09-20
+  BorrowedBy: MyString
+  my_car_id: 1
+
+two:
+  FromDate: 2018-09-20
+  ToDate: 2018-09-20
+  BorrowedBy: MyString
+  my_car_id: 1

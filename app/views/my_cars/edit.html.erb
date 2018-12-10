@@ -1,0 +1,9 @@
+<h1>Edit <%= :CarType %> - <%= :CarName %> details</h1>
+
+	<%= form_for @my_cars do |f| %>
+
+	<p>	<%= f.label :CarName %> <%= f.text_field :CarName %></p>
+	<p>	<%= f.label :CarType %> <%= f.text_field :CarType %></p>	
+	<p>	<%= f.label :Year %> <%= f.text_field :Year %> </p>
+	<%= f.submit "Submit" %>
+	<% end %>
